@@ -1,0 +1,14 @@
+name: Drill CI
+
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deliberately fail
+        run: |
+          echo "CI drill: intentionally failing this step for runbook practice"
+          exit 1
